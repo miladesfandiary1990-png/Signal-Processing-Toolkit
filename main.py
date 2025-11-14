@@ -1,5 +1,6 @@
 from math import sin
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 class Signal:
