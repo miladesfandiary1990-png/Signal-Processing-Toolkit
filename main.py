@@ -7,7 +7,7 @@ class Signal:
         pass
 
     def generate(self, frequency, duration, amplitude, sample_rate):
-        return np.sin(frequency * np.array(range(sample_rate * duration)))
+        return amplitude*np.sin(frequency * np.array(range(sample_rate * duration)))
 
     def visualize(self):
         pass
@@ -17,4 +17,4 @@ class Signal:
 
 
 s1 = Signal()
-print(s1.generate(10))
+print(s1.generate(10,2,3,100))
