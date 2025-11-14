@@ -9,15 +9,19 @@ class Signal:
         self.amplitude = amplitude
         self.duration = duration
         self.sample_rate = sample_rate
-        self.signal= generate(frequency)
+        self.signal= generate()
   
     def generate(self, frequency, duration, amplitude, sample_rate):
-        return np.sin(frequency * np.array(range(sample_rate * duration)))
+        t = np.linspace(0, self.duration, int(self.sample_rate * self.duration), endpoint=False)
+        return self.amplitude * np.sin(2 * np.pi * self.frequency * t)
 
-    def visualize(self, x, y):
-        plt.plot(x, y)
-        plt.show()
+    def visualize(self, signal):
+        fig, axs = plt.subplots(1, 3, figsize=(10, 8))
+        for i in signal in enumerate(signals):
+        x = range(len(signal))
+        axs[i].plot(x. signal)
+        axs[i].set_title(f'signal {signal(i).frequency} Hz')
+        axs[i].grid(True)
 
-
-s1 = Signal()
-print(s1.generate(10))
+    plt.tight_layout()
+    plt.show()
