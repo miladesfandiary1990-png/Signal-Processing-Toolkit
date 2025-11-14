@@ -10,7 +10,7 @@ class Signal:
         self.sample_rate = sample_rate
         self.signal= generate(frequency)  
 
-       self.visualize(x, y)
+        self.visualize(x, y)
 
     def generate(self, frequency, duration, amplitude, sample_rate):
         return np.sin(frequency * np.array(range(sample_rate * duration)))
