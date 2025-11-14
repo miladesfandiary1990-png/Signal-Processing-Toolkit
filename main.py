@@ -15,11 +15,12 @@ class Signal:
 
     def visualize(self, signal):
         fig, axs = plt.subplots(1, 3, figsize=(10, 8))
-        for i in signal in enumerate(signals):
-        x = range(len(signal))
-        axs[i].plot(x. signal)
-        axs[i].set_title(f'signal {signal(i).frequency} Hz')
-        axs[i].grid(True)
+        for i, sig in enumerate(signal):
+            x = range(len(sig))
+            axs[i].plot(x, sig)
+            axs[i].set_title(f'signal {i} Hz')
+            axs[i].grid(True)
 
-    plt.tight_layout()
-    plt.show()
+        plt.tight_layout()
+        plt.show(block=True)
+        return fig
