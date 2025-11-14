@@ -9,15 +9,14 @@ class Signal:
         self.amplitude = amplitude
         self.duration = duration
         self.sample_rate = sample_rate
-        self.signal= generate(frequency)  
+        self.signal= generate(frequency)
+  
     def generate(self, frequency, duration, amplitude, sample_rate):
         return np.sin(frequency * np.array(range(sample_rate * duration)))
 
     def visualize(self, x, y):
         plt.plot(x, y)
         plt.show()
-    def add_noise(self):
-        pass
 
 
 s1 = Signal()
