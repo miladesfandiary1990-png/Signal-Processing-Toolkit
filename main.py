@@ -8,9 +8,11 @@ class Signal:
         self.amplitude = amplitude
         self.duration = duration
         self.sample_rate = sample_rate
-        self.signal= generate(frequency)  
-    def generate(self, frequency, duration, amplitude, sample_rate):
-        return np.sin(frequency * np.array(range(sample_rate * duration)))
+        self.signal= generate()  
+        
+    def generate(self):
+        t = np.linspace(0, self.duration, int(self.sample_rate * self.duration), endpoint=False)
+        return self.amplitude * np.sin(2 * np.pi * self.frequency * t)
 
     def visualize(self, x, y):
         plt.plot(x, y)
