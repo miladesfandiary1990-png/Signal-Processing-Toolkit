@@ -1,32 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-<<<<<<< HEAD
-=======
-
->>>>>>> generate02
 class Signal:
     def __init__(self, frequency, amplitude, duration, sample_rate):
         self.frequency = frequency
         self.amplitude = amplitude
         self.duration = duration
         self.sample_rate = sample_rate
-<<<<<<< HEAD
-        self.signal=generate()
-    def generate(self):
-        t = np.linspace(0, self.duration, int(self.sample_rate * self.duration), endpoint=False)
-        return self.amplitude * np.sin(2 * np.pi * self.frequency * t)
-
-    def visualize(self, signal):
-        fig, axs = plt.subplots(1, 3, figsize=(10, 8))
-        for i in signal in enumerate(signals):
-        x = range(len(signal))
-        axs[i].plot(x. signal)
-        axs[i].set_title(f'signal {signal(i).frequency} Hz')
-        axs[i].grid(True)
-
-    plt.tight_layout()
-    plt.show()
-=======
         self.signal = self.generate()
 
     def generate(self):
@@ -63,7 +42,7 @@ class Signal:
 
 
 # Example usage
-f1=int(input())
+f1=int(input("Please insert the frequency"))
 s1 = Signal(frequency=f1, amplitude=1, duration=1, sample_rate=1000)
 print (s1.signal)
 s1.visualize()
@@ -78,4 +57,3 @@ s3.add_noise()
 # Now works:
 s5 = s1 + s2 + s3
 s5.visualize()
->>>>>>> generate02
