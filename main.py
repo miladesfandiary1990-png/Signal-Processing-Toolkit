@@ -11,7 +11,7 @@ class Signal:
         self.sample_rate = sample_rate
         self.signal= generate()
   
-    def generate(self, frequency, duration, amplitude, sample_rate):
+    def generate(self):
         t = np.linspace(0, self.duration, int(self.sample_rate * self.duration), endpoint=False)
         return self.amplitude * np.sin(2 * np.pi * self.frequency * t)
 
