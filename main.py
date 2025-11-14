@@ -10,7 +10,7 @@ class Signal:
         return np.sin(frequency * np.array(range(sample_rate * duration)))
 
     def visualize(self):
-        pass
+        plt.plot(x, y)
 
     def add_noise(self):
         pass
